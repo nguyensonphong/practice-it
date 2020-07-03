@@ -18,5 +18,14 @@ public static boolean contains3(List<String> list) {
         }
     }
     
-    return map.containsValue(3);
+    //return map.containsValue(3);
+    // due to the requirement as at least 3 times => it mean that it need more than 3.
+    Collection<Integer> result = map.values();
+    
+    for(int x : result){
+        if (x >= 3){
+            return true; 
+        }
+    }
+    return false;
 }
