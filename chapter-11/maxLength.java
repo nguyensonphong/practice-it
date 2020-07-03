@@ -6,6 +6,7 @@
 
 public static int maxLength(Set<String> set) {
     int max = 0;
+   /*
     Iterator<String> i = set.iterator();
     
     while (i.hasNext()) {
@@ -14,6 +15,11 @@ public static int maxLength(Set<String> set) {
             max = word.length();
         }
     }
-    
+    */
+    for (String s : set){
+        if(s.length() > max){
+            max = s.length();
+        }
+    }
     return max;
 }
