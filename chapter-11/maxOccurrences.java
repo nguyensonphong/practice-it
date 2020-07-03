@@ -18,7 +18,7 @@ public static int maxOccurrences(List<Integer> list) {
             map.put(num, 1);
         }
     }
-    
+    /*
     Set<Integer> setKey = map.keySet();
     i = setKey.iterator();
     int max = 0;
@@ -30,5 +30,15 @@ public static int maxOccurrences(List<Integer> list) {
         }
     }
     
+    return max;
+    */ 
+    // use Collection for quick.
+    Collection<Integer> collect = map.values();
+    int max = 0;
+    for (int y : collect){
+        if( y > max){
+            max = y;
+        }
+    }
     return max;
 }
